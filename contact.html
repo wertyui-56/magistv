@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="es-AR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>Contacto - Magis TV</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: radial-gradient(circle at 10% 20%, #0a0a0a, #030303); color: #eef2ff; }
+        .navbar { background: rgba(0, 0, 0, 0.85); backdrop-filter: blur(12px); padding: 1rem 2rem; display: flex; justify-content: space-between; align-items: center; border-bottom: 2px solid #f5b042; }
+        .logo h2 { font-size: 1.9rem; font-weight: 800; background: linear-gradient(135deg, #fff, #f5b042); -webkit-background-clip: text; background-clip: text; color: transparent; }
+        .nav-links { display: flex; gap: 1.3rem; list-style: none; }
+        .nav-links a { color: #f0f0f0; text-decoration: none; font-weight: 600; transition: 0.2s; }
+        .nav-links a:hover { color: #f5b042; }
+        .container { max-width: 800px; margin: 4rem auto; padding: 2rem; }
+        .card-3d { background: linear-gradient(125deg, #0c0b0a 0%, #1c1507 100%); border-radius: 30px; padding: 3rem; border: 1px solid rgba(245, 176, 66, 0.3); }
+        h1 { font-size: 2.5rem; color: #f5b042; margin-bottom: 1rem; text-align: center; }
+        p { font-size: 1.1rem; line-height: 1.6; color: #bbb; margin-bottom: 2rem; text-align: center; }
+        
+        .form-group { margin-bottom: 1.5rem; }
+        .form-group label { display: block; margin-bottom: 0.5rem; color: #fff; font-weight: 600; }
+        .form-group input, .form-group textarea { width: 100%; padding: 1rem; border-radius: 12px; border: 1px solid #2a2418; background: #15130d; color: #fff; font-family: 'Inter', sans-serif; transition: 0.3s; }
+        .form-group input:focus, .form-group textarea:focus { outline: none; border-color: #f5b042; box-shadow: 0 0 10px rgba(245, 176, 66, 0.2); }
+        .form-group textarea { resize: vertical; min-height: 150px; }
+        
+        .btn-submit { width: 100%; background: #f5b042; color: #000; padding: 1rem; border-radius: 12px; font-weight: bold; font-size: 1.1rem; border: none; cursor: pointer; transition: 0.2s; margin-top: 1rem; }
+        .btn-submit:hover { background: #ffcd7e; transform: translateY(-2px); box-shadow: 0 10px 20px -5px rgba(245, 176, 66, 0.5); }
+        
+        .contact-info { margin-top: 3rem; text-align: center; padding-top: 2rem; border-top: 1px solid rgba(245, 176, 66, 0.2); }
+        .contact-info a { color: #f5b042; text-decoration: none; font-size: 1.2rem; }
+        .contact-info a:hover { text-decoration: underline; }
+        @media (max-width:900px) {
+            .navbar {
+                flex-direction: column;
+                padding: 1rem;
+            }
+            .nav-links {
+                justify-content: center;
+                margin-top: 1rem;
+            }
+            .logo h2 {
+                font-size: 1.5rem;
+            }
+        }
+        @media (max-width:700px) {
+            .nav-links {
+                gap: 0.5rem;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar">
+        <div class="logo">
+            <h2>MAGIS<span style="color:#f5b042;">TV</span> <i class="fas fa-crown"></i></h2>
+        </div>
+        <ul class="nav-links">
+            <li><a href="index.html">Inicio</a></li>
+            <li><a href="magis-tv-parra-pc.html">PC</a></li>
+            <li><a href="about.html">Acerca de</a></li>
+            <li><a href="contact.html" style="color: #f5b042;">Contacto</a></li>
+            <li><a href="pravacy policey.html">Privacidad</a></li>
+            <li><a href="terms.html">Términos</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div class="card-3d">
+            <h1>Contáctanos</h1>
+            <div style="text-align: center; margin: 2rem 0;">
+                <img src="magis tv.webp" alt="Magis TV Contacto" loading="lazy" style="max-width: 100%; max-height: 400px; border-radius: 20px; box-shadow: 0 10px 30px rgba(245, 176, 66, 0.2);">
+            </div>
+            <p>¿Tienes alguna duda o sugerencia? Envíanos un mensaje y te responderemos a la brevedad posible.</p>
+            
+            <form action="#" method="POST" onsubmit="event.preventDefault(); alert('Mensaje enviado con éxito.');">
+                <div class="form-group">
+                    <label for="name"><i class="fas fa-user"></i> Nombre completo</label>
+                    <input type="text" id="name" name="name" placeholder="Tu nombre" required>
+                </div>
+                <div class="form-group">
+                    <label for="email"><i class="fas fa-envelope"></i> Correo electrónico</label>
+                    <input type="email" id="email" name="email" placeholder="tu@email.com" required>
+                </div>
+                <div class="form-group">
+                    <label for="subject"><i class="fas fa-tag"></i> Asunto</label>
+                    <input type="text" id="subject" name="subject" placeholder="Asunto de tu mensaje" required>
+                </div>
+                <div class="form-group">
+                    <label for="message"><i class="fas fa-comment"></i> Mensaje</label>
+                    <textarea id="message" name="message" placeholder="Escribe tu mensaje aquí..." required></textarea>
+                </div>
+                <button type="submit" class="btn-submit"><i class="fas fa-paper-plane"></i> Enviar Mensaje</button>
+            </form>
+            
+            <div class="contact-info">
+                <p>También puedes contactarnos directamente:</p>
+                <a href="mailto:tayyabhusssainwbm@gmail.com"><i class="fas fa-envelope"></i> tayyabhusssainwbm@gmail.com</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
